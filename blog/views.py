@@ -27,5 +27,8 @@ def post_new(request):
         form = PostForm()
     return render(request, 'blog/post_edit.html', {'form': form})
 
-def login(request):
-    return render(request, 'registration/login.hrml', {'form': login})
+def login_view(request):
+    return render(request, 'registration/login.hml', {'form': login})
+
+def logout_view(request):
+    return redirect(request, '/')
